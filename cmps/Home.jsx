@@ -1,4 +1,5 @@
 import { About } from "./About.jsx";
+import { BookIndex } from "./BookIndex.jsx";
 
 export function Home() {
     return (
@@ -9,6 +10,7 @@ export function Home() {
             samsung smart toaster and more!</p>
             <button>Our catalog</button>
             <About />
+            <BookIndex />
         </section>
     )
 }
