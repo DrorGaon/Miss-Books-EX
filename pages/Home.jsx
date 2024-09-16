@@ -1,7 +1,7 @@
 import { About } from "./About.jsx";
 import { BookIndex } from "./BookIndex.jsx";
 
-export function Home() {
+export function Home({onSetPage}) {
 
     return (
         <section>
@@ -9,9 +9,7 @@ export function Home() {
             <p>Your go to place for anything books!</p>
             <p>New - now also on the samsung smart fridge, <br />
             samsung smart toaster and more!</p>
-            <button>Our catalog</button>
-            <About />
-            <BookIndex />
+            <button onClick={() => onSetPage('books')}>Our catalog</button>
         </section>
     )
 }
