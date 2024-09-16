@@ -2,6 +2,7 @@ import { About } from "./About.jsx";
 import { BookIndex } from "./BookIndex.jsx";
 
 export function Home() {
+
     return (
         <section>
             <h2>Welcome to Miss Books</h2>

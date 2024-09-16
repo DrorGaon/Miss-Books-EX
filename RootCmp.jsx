@@ -1,5 +1,5 @@
 import { AppHeader } from './cmps/AppHeader.jsx'
-import { Home } from './cmps/Home.jsx'
+import { Home } from './pages/Home.jsx'
 
 export function App() {
     return (
