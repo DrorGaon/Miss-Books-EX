@@ -46,8 +46,8 @@ function save(book) {
     }
 }
 
-function getEmptybook(title = '', desc = 0) {
-    return { id: '', title, desc }
+function getEmptybook(title = '', listPrice = 0) {
+    return { id: '', title, listPrice }
 }
 
 function getFilterBy() {
@@ -73,10 +73,10 @@ function _createbooks() {
     let books = utilService.loadFromStorage(BOOK_KEY)
     if (!books || !books.length) {
         books = []
-        books.push(_createbook('hp1' ))
-        books.push(_createbook('hp2' ))
-        books.push(_createbook('hp3' ))
-        books.push(_createbook('hp4' ))
+        books.push(_createbook('Harry Potter vol. 1', 150))
+        books.push(_createbook('Harry Potter vol. 2', 84))
+        books.push(_createbook('Harry Potter vol. 3', 60))
+        books.push(_createbook('Harry Potter vol. 4'))
         utilService.saveToStorage(BOOK_KEY, books)
     }
 }

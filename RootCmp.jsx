@@ -7,7 +7,7 @@ import { Home } from './pages/Home.jsx'
 
 export function App() {
 
-    const [page, setPage] = useState('home')
+    const [page, setPage] = useState('books')
 
     function onSetPage(page){
         setPage(page)
