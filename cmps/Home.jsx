@@ -1,3 +1,5 @@
+import { About } from "./About.jsx";
+
 export function Home() {
     return (
         <section>
@@ -6,6 +8,7 @@ export function Home() {
             <p>New - now also on the samsung smart fridge, <br />
             samsung smart toaster and more!</p>
             <button>Our catalog</button>
+            <About />
         </section>
     )
 }
