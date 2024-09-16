@@ -1,11 +1,12 @@
 .app-header {
   background-color: var(--clr1);
   color: var(--clr1bg);
-  padding: 1em;
+  padding: 1.25em;
 }
 
 .app-header h1{
   font-size: 1.75em;
+  margin: 0;
 }
 
 @media(max-width: 720px) {
