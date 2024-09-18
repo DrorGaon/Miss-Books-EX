@@ -19,7 +19,7 @@ export function BookDetails({bookId, onBack}){
     return (
         <section className="book-details">
             <h2>Title: {book.title}</h2>
-            <h2>Price: {listPrice.amount}{listPrice.symbol}</h2>
+            <h2>Price: {listPrice.price}{listPrice.symbol}</h2>
             <h2>Book summary:</h2>
             <p>{book.desc}</p>
             <img src={book.cover} alt="book-cover" />
