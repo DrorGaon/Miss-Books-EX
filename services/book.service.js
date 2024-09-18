@@ -51,7 +51,8 @@ function getEmptybook(title = '', listPrice = 0) {
         id: '',
         title, 
         listPrice,
-        cover: `/assets/img/${utilService.getRandomIntInclusive(1, 20)}.jpg`
+        cover: `/assets/img/${utilService.getRandomIntInclusive(1, 20)}.jpg`,
+        desc: utilService.makeLorem(35)
     }
 }
 

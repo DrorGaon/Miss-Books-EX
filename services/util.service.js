@@ -19,11 +19,15 @@ function makeId(length = 6) {
 }
 
 function makeLorem(size = 100) {
-    var words = ['The sky', 'above', 'the port', 'was', 'the color of television', 'tuned', 'to', 'a dead channel', '.', 'All', 'this happened', 'more or less', '.', 'I', 'had', 'the story', 'bit by bit', 'from various people', 'and', 'as generally', 'happens', 'in such cases', 'each time', 'it', 'was', 'a different story', '.', 'It', 'was', 'a pleasure', 'to', 'burn']
+    var words = ['The sky', 'above', 'the port', 'was', 'the color of television', 'tuned', 'to', 'a dead channel', 'All', 'this happened', 'more or less', 'I', 'had', 'the story', 'bit by bit', 'from various people', 'and', 'as generally', 'happens', 'in such cases', 'each time', 'it', 'was', 'a different story', 'It', 'was', 'a pleasure', 'to', 'burn']
+    var punctuations = ['.', ',']
     var txt = ''
     while (size > 0) {
+        var idx = getRandomIntInclusive(0, 9)
+        var punc = (idx < 2) ? punctuations[idx] : ''
+        if (size === 1) punc = '.'
         size--
-        txt += words[Math.floor(Math.random() * words.length)] + ' '
+        txt += words[Math.floor(Math.random() * words.length)] + punc + ' '
     }
     return txt
 }
