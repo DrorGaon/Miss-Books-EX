@@ -17,6 +17,7 @@ export function BookDetails({bookId, onBack}){
         <section className="book-details">
             <h2>{book.title}</h2>
             <h2>{book.listPrice}</h2>
+            <img src={book.cover} alt="book-cover" />
             <button onClick={onBack}>Back</button>
         </section>
     )

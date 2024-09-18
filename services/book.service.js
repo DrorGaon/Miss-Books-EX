@@ -47,7 +47,12 @@ function save(book) {
 }
 
 function getEmptybook(title = '', listPrice = 0) {
-    return { id: '', title, listPrice }
+    return { 
+        id: '',
+        title, 
+        listPrice,
+        cover: `/assets/img/${utilService.getRandomIntInclusive(1, 20)}.jpg`
+    }
 }
 
 function getFilterBy() {
