@@ -13,10 +13,13 @@ export function BookDetails({bookId, onBack}){
     }, [])
 
     if (!book) return <h1>Loading...</h1>
+
+    const {listPrice} = book
+
     return (
         <section className="book-details">
             <h2>Title: {book.title}</h2>
-            <h2>Price: {book.listPrice}</h2>
+            <h2>Price: {listPrice.amount}{listPrice.symbol}</h2>
             <h2>Book summary:</h2>
             <p>{book.desc}</p>
             <img src={book.cover} alt="book-cover" />

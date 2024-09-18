@@ -2,7 +2,7 @@ import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 
 const BOOK_KEY = 'book'
-var gFilterBy = { listPrice: 0, title: '' }
+var gFilterBy = { amount: 0, title: '' }
 _createbooks()
 
 export const bookservice = {
@@ -19,7 +19,7 @@ export const bookservice = {
 function query() {
     return storageService.query(BOOK_KEY)
         .then(books => {
-            // if (gFilterBy.listPrice) {
+            // if (gFilterBy.amount) {
             //     const regex = new RegExp(gFilterBy.txt, 'i')
             //     books = books.filter()
             // }
@@ -46,11 +46,15 @@ function save(book) {
     }
 }
 
-function getEmptybook(title = '', listPrice = 0) {
+function getEmptybook(title = '', amount = 100, symbol = '₪') {
     return { 
         id: '',
         title, 
-        listPrice,
+        listPrice: {
+            amount,
+            symbol,
+            isOnSale: false,
+        },
         cover: `/assets/img/${utilService.getRandomIntInclusive(1, 20)}.jpg`,
         desc: utilService.makeLorem(35)
     }
@@ -62,7 +66,7 @@ function getFilterBy() {
 
 function setFilterBy(filterBy = {}) {
     if (filterBy.title !== undefined) gFilterBy.title = filterBy.title
-    if (filterBy.listPrice !== undefined) gFilterBy.listPrice = filterBy.listPrice
+    if (filterBy.amount !== undefined) gFilterBy.amount = filterBy.amount
     return gFilterBy
 }
 
@@ -87,8 +91,8 @@ function _createbooks() {
     }
 }
 
-function _createbook(title, listPrice = 100) {
-    const book = getEmptybook(title, listPrice)
+function _createbook(title, amount = 100) {
+    const book = getEmptybook(title, amount)
     book.id = utilService.makeId()
     return book
 }
