@@ -1,0 +1,29 @@
+.book-filter{
+    background-color: rgb(1, 186, 124);
+    width: 90vw;
+    padding: 1px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.book-filter h1{
+    text-align: center;
+    font-size: 1.75em;
+    text-decoration: underline;
+}
+
+.filter-params{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.filter-params input{
+    grid-column: 2;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-inline: 10px;
+}
+
+.filter-params label{
+    grid-column: 1;
+}
