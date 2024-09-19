@@ -29,6 +29,14 @@ export function BookIndex(){
         setSelectedBookId(null)
     }
 
+    function onRemoveBook(bookId){
+        bookservice.remove(bookId)
+            .then(() => {
+                setBooks(books => books.filter(book => book.id !== bookId))
+            })
+            .catch(err => console.log(err))
+    }
+
     if (!books) return <h1>Loading</h1>
     return (
         <section className="book-index">
@@ -39,6 +47,7 @@ export function BookIndex(){
                     <BookList 
                     books={books} 
                     setBookToDisplay={setBookToDisplay}
+                    onRemoveBook={onRemoveBook}
                     />
                 </React.Fragment>
             }

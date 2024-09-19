@@ -8,9 +8,19 @@
 }
 
 .book-list li{
+    position: relative;
+
     background-color: rgb(233, 255, 255);
     border: 1px solid black;
     padding: 10px;
     
     text-align: center;
+}
+
+.remove-btn{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+
+    border-radius: 20px;
 }
