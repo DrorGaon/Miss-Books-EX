@@ -12,13 +12,17 @@ export function BookIndex(){
     const [filterBy, setFilterBy] = useState(bookservice.getFilterBy)
 
     useEffect(() => {
-        bookservice.query(filterBy)
-            .then(setBooks)
-            .catch(err => console.log(err))
+        loadBooks()
     }, [filterBy])
 
     function setBookToDisplay(bookId){
         setSelectedBookId(bookId)
+    }
+
+    function loadBooks(){
+        bookservice.query(filterBy)
+            .then(setBooks)
+            .catch(err => console.log(err))
     }
 
     function onSetFilterBy(filterBy){
