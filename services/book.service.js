@@ -1,5 +1,6 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
+import { booksData } from './book.database.js'
 
 const BOOK_KEY = 'book'
 _createbooks()
@@ -81,17 +82,7 @@ function getNextbookId(bookId) {
 function _createbooks() {
     let books = utilService.loadFromStorage(BOOK_KEY)
     if (!books || !books.length) {
-        books = []
-        books.push(_createbook('Harry Potter vol. 1', 150))
-        books.push(_createbook('Harry Potter vol. 2', 84))
-        books.push(_createbook('Harry Potter vol. 3', 60))
-        books.push(_createbook('Harry Potter vol. 4'))
+        books = booksData
         utilService.saveToStorage(BOOK_KEY, books)
     }
-}
-
-function _createbook(title, price = 100) {
-    const book = getEmptybook(title, price)
-    book.id = utilService.makeId()
-    return book
 }
