@@ -1,8 +1,9 @@
 .book-filter{
-    background-color: rgb(1, 186, 124);
-    width: 90vw;
+    background-color: rgb(83, 188, 153);
+    width: min(90vw, 600px);
     padding: 1px 10px 10px 10px;
     border-radius: 10px;
+    margin: auto;
 }
 
 .book-filter h1{
