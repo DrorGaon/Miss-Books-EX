@@ -18,8 +18,10 @@ export function BookDetails({bookId, onBack}){
 
     if (!book) return <h1>Loading...</h1>
 
-    const {listPrice, title, cover, desc, pageCount} = book
+    const {listPrice, title, cover, desc, pageCount, publishedDate} = book
     const pageCountTxt = (pageCount > 500) ? 'Serious Reading' : (pageCount > 200) ? 'Descent Reading' : 'Light Reading'
+    const year = new Date().getFullYear()
+    const publishedDateTxt = (year - publishedDate >= 10) ? '(Vintage)' :  (year - publishedDate <= 1) ? '(New)' : ''
 
     return (
         <section className="book-details">
@@ -28,6 +30,7 @@ export function BookDetails({bookId, onBack}){
             <h2>Length: {pageCount} pages {`(${pageCountTxt})`}</h2>
             <h2>Book summary:</h2>
             <p>{desc}</p>
+            <h2>Pusblished on {`${publishedDate} ${publishedDateTxt}`}</h2>
             <img src={cover} alt="book-cover" />
             <button onClick={onBack}>Back</button>
         </section>
