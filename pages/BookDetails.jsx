@@ -1,3 +1,4 @@
+import { LongText } from "../cmps/LongText.jsx"
 import { bookservice } from "../services/book.service.js"
 
 const {useState, useEffect} = React
@@ -31,7 +32,7 @@ export function BookDetails({bookId, onBack}){
                 <h2>Price: <span className={priceClass}>{listPrice.price}{listPrice.symbol}</span></h2>
                 <h2>Length: {pageCount} pages {`(${pageCountTxt})`}</h2>
                 <h2>Book summary:</h2>
-                <p>{desc}</p>
+                <LongText txt={desc}/>
                 <h2>Pusblished on {`${publishedDate} ${publishedDateTxt}`}</h2>
             </section>
             <img src={cover} alt="book-cover" />
