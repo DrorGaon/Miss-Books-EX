@@ -26,12 +26,14 @@ export function BookDetails({bookId, onBack}){
 
     return (
         <section className="book-details">
-            <h2>Title: {title}</h2>
-            <h2>Price: <span className={priceClass}>{listPrice.price}{listPrice.symbol}</span></h2>
-            <h2>Length: {pageCount} pages {`(${pageCountTxt})`}</h2>
-            <h2>Book summary:</h2>
-            <p>{desc}</p>
-            <h2>Pusblished on {`${publishedDate} ${publishedDateTxt}`}</h2>
+            <section>
+                <h2>Title: {title}</h2>
+                <h2>Price: <span className={priceClass}>{listPrice.price}{listPrice.symbol}</span></h2>
+                <h2>Length: {pageCount} pages {`(${pageCountTxt})`}</h2>
+                <h2>Book summary:</h2>
+                <p>{desc}</p>
+                <h2>Pusblished on {`${publishedDate} ${publishedDateTxt}`}</h2>
+            </section>
             <img src={cover} alt="book-cover" />
             <button onClick={onBack}>Back</button>
         </section>
