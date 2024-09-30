@@ -10,6 +10,7 @@ export function BookFilter({filterBy, onSetFilterBy}){
 
     useEffect(() => {
         onSetFilterBy(filterByToEdit)
+        console.log(filterByToEdit)
     }, [filterByToEdit])
 
     function handleChange({target}){
@@ -29,7 +30,7 @@ export function BookFilter({filterBy, onSetFilterBy}){
         setFilterByToEdit(prevFilter => ({...prevFilter, [field]: value}))
     }
 
-    const {title, minPrice} = filterByToEdit
+    const {title, minPrice, author} = filterByToEdit
 
     return (
         <section className="book-filter">
@@ -39,6 +40,8 @@ export function BookFilter({filterBy, onSetFilterBy}){
                 <input value={title} onChange={handleChange} type="text" name="title" id="title" placeholder="Search by book title"/>
                 <label htmlFor="minPrice">By minimum price:</label>
                 <input value={minPrice || ''} onChange={handleChange} type="number" name="minPrice" id="minPrice" placeholder="Search by minimun price"/>
+                <label htmlFor="author">By author:</label>
+                <input value={author || ''} onChange={handleChange} type="text" name="author" id="author" placeholder="Search by author name"/>
             </form>
         </section>
     )

@@ -262,145 +262,144 @@ export const booksData = [
             "isOnSale": false
         }
     },
-        {
-            "id": "5z2s9pDXAYj",
-            "title": "Fires of Desire",
-            "authors": [
-                "Danielle Steel"
-            ],
-            "publishedDate": 1999,
-            "desc": utilService.makeLorem(35),
-            "pageCount": 608,
-            "genres": [
-                'Romance', 'Drama'
-            ],
-            "cover": "./assets/img/3.jpg",
-            "language": "he",
-            "listPrice": {
-                "price": 150,
-                "symbol": "₪",
-                "isOnSale": false
-            }
-        },
-        {
-            "id": "zBZu5cDEWha",
-            "title": "Footsteps Through Time",
-            "authors": [
-                "Jin Yong"
-            ],
-            "publishedDate": 2011,
-            "desc": utilService.makeLorem(35),
-            "pageCount": 583,
-            "genres": [
-                'Fantasy', 'Adventure'
-            ],
-            "cover": "./assets/img/6.jpg",
-            "language": "en",
-            "listPrice": {
-                "price": 58,
-                "symbol": "$",
-                "isOnSale": true
-            }
-        },
-        {
-            "id": "aOI7tQuPZ2f",
-            "title": "Days of Reckoning",
-            "authors": [
-                "Leo Tolstoy"
-            ],
-            "publishedDate": 2011,
-            "desc": utilService.makeLorem(35),
-            "pageCount": 497,
-            "genres": [
-                'Historical Fiction', 'Drama'
-            ],
-            "cover": "./assets/img/7.jpg",
-            "language": "en",
-            "listPrice": {
-                "price": 78,
-                "symbol": "$",
-                "isOnSale": false
-            }
-        },
-        {
-            "id": "WBooB82Uvwu",
-            "title": "The Cursed Forest",
-            "authors": [
-                "Danielle Steel"
-            ],
-            "publishedDate": 1999,
-            "desc": utilService.makeLorem(35),
-            "pageCount": 804,
-            "genres": [
-                'Romance', 'Contemporary'
-            ],
-            "cover": "./assets/img/10.jpg",
-            "language": "sp",
-            "listPrice": {
-                "price": 118,
-                "symbol": "$",
-                "isOnSale": false
-            }
-        },
-        {
-            "id": "xm1z5bbZjlS",
-            "title": "The Last Exodus",
-            "authors": [
-                "Leo Tolstoy"
-            ],
-            "publishedDate": 1999,
-            "desc": utilService.makeLorem(35),
-            "pageCount": 231,
-            "genres": [
-                'Historical Fiction', 'Non-fiction'
-            ],
-            "cover": "./assets/img/12.jpg",
-            "language": "he",
-            "listPrice": {
-                "price": 60,
-                "symbol": "₪",
-                "isOnSale": false
-            }
-        },
-        {
-            "id": "u3j6QIKLlJb",
-            "title": "The Summer of Us",
-            "authors": [
-                "Agatha Christie"
-            ],
-            "publishedDate": 1978,
-            "desc": utilService.makeLorem(35),
-            "pageCount": 652,
-            "genres": [
-                'Mystery', 'Thriller'
-            ],
-            "cover": "./assets/img/20.jpg",
-            "language": "he",
-            "listPrice": {
-                "price": 110,
-                "symbol": "$",
-                "isOnSale": true
-            }
-        },
-        {
-            "id": "vxYYYdVlEH3",
-            "title": "The Forgotten Realm",
-            "authors": [
-                "Dr. Seuss"
-            ],
-            "publishedDate": 2011,
-            "desc": utilService.makeLorem(35),
-            "pageCount": 904,
-            "genres": [
-                'Fantasy', 'Young Adult'
-            ],
-            "cover": "./assets/img/15.jpg",
-            "language": "sp",
-            "listPrice": {
-                "price": 186,
-                "symbol": "€",
-                "isOnSale": true
-            }
+    {
+        "id": "5z2s9pDXAYj",
+        "title": "Fires of Desire",
+        "authors": [
+            "Danielle Steel"
+        ],
+        "publishedDate": 1999,
+        "desc": utilService.makeLorem(35),
+        "pageCount": 608,
+        "genres": [
+            'Romance', 'Drama'
+        ],
+        "cover": "./assets/img/3.jpg",
+        "language": "he",
+        "listPrice": {
+            "price": 150,
+            "symbol": "₪",
+            "isOnSale": false
         }
-    ]
-    
+    },
+    {
+        "id": "zBZu5cDEWha",
+        "title": "Footsteps Through Time",
+        "authors": [
+            "Jin Yong"
+        ],
+        "publishedDate": 2011,
+        "desc": utilService.makeLorem(35),
+        "pageCount": 583,
+        "genres": [
+            'Fantasy', 'Adventure'
+        ],
+        "cover": "./assets/img/6.jpg",
+        "language": "en",
+        "listPrice": {
+            "price": 58,
+            "symbol": "$",
+            "isOnSale": true
+        }
+    },
+    {
+        "id": "aOI7tQuPZ2f",
+        "title": "Days of Reckoning",
+        "authors": [
+            "Leo Tolstoy"
+        ],
+        "publishedDate": 2011,
+        "desc": utilService.makeLorem(35),
+        "pageCount": 497,
+        "genres": [
+            'Historical Fiction', 'Drama'
+        ],
+        "cover": "./assets/img/7.jpg",
+        "language": "en",
+        "listPrice": {
+            "price": 78,
+            "symbol": "$",
+            "isOnSale": false
+        }
+    },
+    {
+        "id": "WBooB82Uvwu",
+        "title": "The Cursed Forest",
+        "authors": [
+            "Danielle Steel"
+        ],
+        "publishedDate": 1999,
+        "desc": utilService.makeLorem(35),
+        "pageCount": 804,
+        "genres": [
+            'Romance', 'Contemporary'
+        ],
+        "cover": "./assets/img/10.jpg",
+        "language": "sp",
+        "listPrice": {
+            "price": 118,
+            "symbol": "$",
+            "isOnSale": false
+        }
+    },
+    {
+        "id": "xm1z5bbZjlS",
+        "title": "The Last Exodus",
+        "authors": [
+            "Leo Tolstoy"
+        ],
+        "publishedDate": 1999,
+        "desc": utilService.makeLorem(35),
+        "pageCount": 231,
+        "genres": [
+            'Historical Fiction', 'Non-fiction'
+        ],
+        "cover": "./assets/img/12.jpg",
+        "language": "he",
+        "listPrice": {
+            "price": 60,
+            "symbol": "₪",
+            "isOnSale": false
+        }
+    },
+    {
+        "id": "u3j6QIKLlJb",
+        "title": "The Summer of Us",
+        "authors": [
+            "Agatha Christie"
+        ],
+        "publishedDate": 1978,
+        "desc": utilService.makeLorem(35),
+        "pageCount": 652,
+        "genres": [
+            'Mystery', 'Thriller'
+        ],
+        "cover": "./assets/img/20.jpg",
+        "language": "he",
+        "listPrice": {
+            "price": 110,
+            "symbol": "$",
+            "isOnSale": true
+        }
+    },
+    {
+        "id": "vxYYYdVlEH3",
+        "title": "The Forgotten Realm",
+        "authors": [
+            "Dr. Seuss"
+        ],
+        "publishedDate": 2011,
+        "desc": utilService.makeLorem(35),
+        "pageCount": 904,
+        "genres": [
+            'Fantasy', 'Young Adult'
+        ],
+        "cover": "./assets/img/15.jpg",
+        "language": "sp",
+        "listPrice": {
+            "price": 186,
+            "symbol": "€",
+            "isOnSale": true
+        }
+    }
+]
