@@ -54,17 +54,22 @@ function save(book) {
     }
 }
 
-function getEmptybook(title = '', price = 100, symbol = '₪') {
+function getEmptybook() {
     return { 
         id: '',
-        title, 
+        title: '',
+        authors: '',
+        publishedDate: '',
+        desc: '',
+        pageCount: '',
+        genres: [],
+        cover: `./assets/img/${utilService.getRandomIntInclusive(1, 20)}.jpg` ,
+        language: 'he',
         listPrice: {
-            price,
-            symbol,
-            isOnSale: false,
-        },
-        cover: `/assets/img/${utilService.getRandomIntInclusive(1, 20)}.jpg`,
-        desc: utilService.makeLorem(35)
+            price: '',
+            symbol: '₪',
+            isOnSale: true
+        }
     }
 }
 
