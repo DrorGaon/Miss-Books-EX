@@ -28,7 +28,11 @@ function query(filterBy = {}) {
             }
             if (filterBy.author) {
                 const regex = new RegExp(filterBy.author, 'i')
-                books = books.filter(book => regex.test(book.authors[0]))
+                books = books.filter(book => regex.test(book.authors))
+            }
+            if (filterBy.genre) {
+                const regex = new RegExp(filterBy.genre, 'i')
+                books = books.filter(book => regex.test(book.genres))
             }
             return books
         })
@@ -65,7 +69,7 @@ function getEmptybook(title = '', price = 100, symbol = '₪') {
 }
 
 function getFilterBy() {
-    return { minPrice: '', title: '', author: ''}
+    return { minPrice: '', title: '', author: '', genre: ''}
 }
 
 function setFilterBy(filterBy = {}) {
