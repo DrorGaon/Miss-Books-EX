@@ -5,9 +5,7 @@ export const booksData = [
     {
         "id": "OXeMG8wNskc",
         "title": "The Dragon’s Quest",
-        "authors": [
-            "Barbara Cartland"
-        ],
+        "author": "Barbara Cartland",
         "publishedDate": 1999,
         "desc": utilService.makeLorem(35),
         "pageCount": 713,
@@ -25,9 +23,7 @@ export const booksData = [
     {
         "id": "JYOJa2NpSCq",
         "title": "The Silent Watcher",
-        "authors": [
-            "Barbara Cartland"
-        ],
+        "author": "Barbara Cartland",
         "publishedDate": 1978,
         "desc": utilService.makeLorem(35),
         "pageCount": 129,
@@ -45,9 +41,7 @@ export const booksData = [
     {
         "id": "1y0Oqts35DQ",
         "title": "Echoes of the Machine",
-        "authors": [
-            "Dr. Seuss"
-        ],
+        "author": "Dr. Seuss",
         "publishedDate": 1999,
         "desc": utilService.makeLorem(35),
         "pageCount": 972,
@@ -65,9 +59,7 @@ export const booksData = [
     {
         "id": "kSnfIJyikTP",
         "title": "Hearts in the City",
-        "authors": [
-            "Danielle Steel"
-        ],
+        "author": "Danielle Steel",
         "publishedDate": 1978,
         "desc": utilService.makeLorem(35),
         "pageCount": 303,
@@ -85,9 +77,7 @@ export const booksData = [
     {
         "id": "f4iuVmbuKCC",
         "title": "Tales of the Starborn",
-        "authors": [
-            "Dr. Seuss"
-        ],
+        "author": "Dr. Seuss",
         "publishedDate": 2011,
         "desc": utilService.makeLorem(35),
         "pageCount": 337,
@@ -105,9 +95,7 @@ export const booksData = [
     {
         "id": "U2rfZO6oBZf",
         "title": "Shadows of the Dark Woods",
-        "authors": [
-            "Leo Tolstoy"
-        ],
+        "author": "Leo Tolstoy",
         "publishedDate": 1978,
         "desc": utilService.makeLorem(35),
         "pageCount": 748,
@@ -125,9 +113,7 @@ export const booksData = [
     {
         "id": "xI0wrXaaAcq",
         "title": "The Lost Monarch",
-        "authors": [
-            "Leo Tolstoy"
-        ],
+        "author": "Leo Tolstoy",
         "publishedDate": 2011,
         "desc": utilService.makeLorem(35),
         "pageCount": 65,
@@ -145,9 +131,7 @@ export const booksData = [
     {
         "id": "9laHCEdSpFy",
         "title": "The Life of a Dreamer",
-        "authors": [
-            "Dr. Seuss"
-        ],
+        "author": "Dr. Seuss",
         "publishedDate": 1999,
         "desc": utilService.makeLorem(35),
         "pageCount": 299,
@@ -165,9 +149,7 @@ export const booksData = [
     {
         "id": "nGhVwZvGCGp",
         "title": "Voyage to the Unknown",
-        "authors": [
-            "Jin Yong"
-        ],
+        "author": "Jin Yong",
         "publishedDate": 2011,
         "desc": utilService.makeLorem(35),
         "pageCount": 803,
@@ -185,9 +167,7 @@ export const booksData = [
     {
         "id": "Q8Q9Lsd03BD",
         "title": "The Enchanted Key",
-        "authors": [
-            "Dr. Seuss"
-        ],
+        "author": "Dr. Seuss",
         "publishedDate": 1978,
         "desc": utilService.makeLorem(35),
         "pageCount": 891,
@@ -205,9 +185,7 @@ export const booksData = [
     {
         "id": "bd7a76kARao",
         "title": "Letters from the Past",
-        "authors": [
-            "Danielle Steel"
-        ],
+        "author": "Danielle Steel",
         "publishedDate": 2018,
         "desc": utilService.makeLorem(35),
         "pageCount": 86,
@@ -225,9 +203,7 @@ export const booksData = [
     {
         "id": "qKyG0vqeO3e",
         "title": "The Ashen Uprising",
-        "authors": [
-            "Danielle Steel"
-        ],
+        "author": "Danielle Steel",
         "publishedDate": 2018,
         "desc": utilService.makeLorem(35),
         "pageCount": 882,
@@ -245,9 +221,7 @@ export const booksData = [
     {
         "id": "2RvT48ZNInj",
         "title": "Into the Abyss",
-        "authors": [
-            "Agatha Christie"
-        ],
+        "author": "Agatha Christie",
         "publishedDate": 2011,
         "desc": utilService.makeLorem(35),
         "pageCount": 598,
@@ -265,9 +239,7 @@ export const booksData = [
     {
         "id": "5z2s9pDXAYj",
         "title": "Fires of Desire",
-        "authors": [
-            "Danielle Steel"
-        ],
+        "author": "Danielle Steel",
         "publishedDate": 1999,
         "desc": utilService.makeLorem(35),
         "pageCount": 608,
@@ -285,9 +257,7 @@ export const booksData = [
     {
         "id": "zBZu5cDEWha",
         "title": "Footsteps Through Time",
-        "authors": [
-            "Jin Yong"
-        ],
+        "author": "Jin Yong",
         "publishedDate": 2011,
         "desc": utilService.makeLorem(35),
         "pageCount": 583,
@@ -305,9 +275,7 @@ export const booksData = [
     {
         "id": "aOI7tQuPZ2f",
         "title": "Days of Reckoning",
-        "authors": [
-            "Leo Tolstoy"
-        ],
+        "author": "Leo Tolstoy",
         "publishedDate": 2011,
         "desc": utilService.makeLorem(35),
         "pageCount": 497,
@@ -325,9 +293,7 @@ export const booksData = [
     {
         "id": "WBooB82Uvwu",
         "title": "The Cursed Forest",
-        "authors": [
-            "Danielle Steel"
-        ],
+        "author": "Danielle Steel",
         "publishedDate": 1999,
         "desc": utilService.makeLorem(35),
         "pageCount": 804,
@@ -345,9 +311,7 @@ export const booksData = [
     {
         "id": "xm1z5bbZjlS",
         "title": "The Last Exodus",
-        "authors": [
-            "Leo Tolstoy"
-        ],
+        "author": "Leo Tolstoy",
         "publishedDate": 1999,
         "desc": utilService.makeLorem(35),
         "pageCount": 231,
@@ -365,9 +329,7 @@ export const booksData = [
     {
         "id": "u3j6QIKLlJb",
         "title": "The Summer of Us",
-        "authors": [
-            "Agatha Christie"
-        ],
+        "author": "Agatha Christie",
         "publishedDate": 1978,
         "desc": utilService.makeLorem(35),
         "pageCount": 652,
@@ -385,9 +347,7 @@ export const booksData = [
     {
         "id": "vxYYYdVlEH3",
         "title": "The Forgotten Realm",
-        "authors": [
-            "Dr. Seuss"
-        ],
+        "author": "Dr. Seuss",
         "publishedDate": 2011,
         "desc": utilService.makeLorem(35),
         "pageCount": 904,
