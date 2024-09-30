@@ -4,7 +4,7 @@ import { utilService } from "./util.service.js";
 export const booksData = [
     {
         "id": "OXeMG8wNskc",
-        "title": "metus hendrerit",
+        "title": "The Dragon’s Quest",
         "authors": [
             "Barbara Cartland"
         ],
@@ -24,7 +24,7 @@ export const booksData = [
     },
     {
         "id": "JYOJa2NpSCq",
-        "title": "morbi",
+        "title": "The Silent Watcher",
         "authors": [
             "Barbara Cartland"
         ],
@@ -44,7 +44,7 @@ export const booksData = [
     },
     {
         "id": "1y0Oqts35DQ",
-        "title": "at viverra venenatis",
+        "title": "Echoes of the Machine",
         "authors": [
             "Dr. Seuss"
         ],
@@ -64,7 +64,7 @@ export const booksData = [
     },
     {
         "id": "kSnfIJyikTP",
-        "title": "dictum",
+        "title": "Hearts in the City",
         "authors": [
             "Danielle Steel"
         ],
@@ -84,7 +84,7 @@ export const booksData = [
     },
     {
         "id": "f4iuVmbuKCC",
-        "title": "sem himenaeos aptent",
+        "title": "Tales of the Starborn",
         "authors": [
             "Dr. Seuss"
         ],
@@ -104,7 +104,7 @@ export const booksData = [
     },
     {
         "id": "U2rfZO6oBZf",
-        "title": "mi ante posuere",
+        "title": "Shadows of the Dark Woods",
         "authors": [
             "Leo Tolstoy"
         ],
@@ -124,7 +124,7 @@ export const booksData = [
     },
     {
         "id": "xI0wrXaaAcq",
-        "title": "non",
+        "title": "The Lost Monarch",
         "authors": [
             "Leo Tolstoy"
         ],
@@ -144,7 +144,7 @@ export const booksData = [
     },
     {
         "id": "9laHCEdSpFy",
-        "title": "tristique",
+        "title": "The Life of a Dreamer",
         "authors": [
             "Dr. Seuss"
         ],
@@ -164,7 +164,7 @@ export const booksData = [
     },
     {
         "id": "nGhVwZvGCGp",
-        "title": "urna ornare gravida",
+        "title": "Voyage to the Unknown",
         "authors": [
             "Jin Yong"
         ],
@@ -184,7 +184,7 @@ export const booksData = [
     },
     {
         "id": "Q8Q9Lsd03BD",
-        "title": "consequat neque volutpat",
+        "title": "The Enchanted Key",
         "authors": [
             "Dr. Seuss"
         ],
@@ -204,7 +204,7 @@ export const booksData = [
     },
     {
         "id": "bd7a76kARao",
-        "title": "risus",
+        "title": "Letters from the Past",
         "authors": [
             "Danielle Steel"
         ],
@@ -224,7 +224,7 @@ export const booksData = [
     },
     {
         "id": "qKyG0vqeO3e",
-        "title": "interdum etiam vulputate",
+        "title": "The Ashen Uprising",
         "authors": [
             "Danielle Steel"
         ],
@@ -244,7 +244,7 @@ export const booksData = [
     },
     {
         "id": "2RvT48ZNInj",
-        "title": "sagittis justo",
+        "title": "Into the Abyss",
         "authors": [
             "Agatha Christie"
         ],
@@ -264,7 +264,7 @@ export const booksData = [
     },
         {
             "id": "5z2s9pDXAYj",
-            "title": "quam ullamcorper himenaeos",
+            "title": "Fires of Desire",
             "authors": [
                 "Danielle Steel"
             ],
@@ -284,7 +284,7 @@ export const booksData = [
         },
         {
             "id": "zBZu5cDEWha",
-            "title": "quis",
+            "title": "Footsteps Through Time",
             "authors": [
                 "Jin Yong"
             ],
@@ -304,7 +304,7 @@ export const booksData = [
         },
         {
             "id": "aOI7tQuPZ2f",
-            "title": "aliquam aliquet dapibus",
+            "title": "Days of Reckoning",
             "authors": [
                 "Leo Tolstoy"
             ],
@@ -324,7 +324,7 @@ export const booksData = [
         },
         {
             "id": "WBooB82Uvwu",
-            "title": "class",
+            "title": "The Cursed Forest",
             "authors": [
                 "Danielle Steel"
             ],
@@ -344,7 +344,7 @@ export const booksData = [
         },
         {
             "id": "xm1z5bbZjlS",
-            "title": "vitae",
+            "title": "The Last Exodus",
             "authors": [
                 "Leo Tolstoy"
             ],
@@ -364,7 +364,7 @@ export const booksData = [
         },
         {
             "id": "u3j6QIKLlJb",
-            "title": "rhoncus vivamus",
+            "title": "The Summer of Us",
             "authors": [
                 "Agatha Christie"
             ],
@@ -384,7 +384,7 @@ export const booksData = [
         },
         {
             "id": "vxYYYdVlEH3",
-            "title": "donec mi ullamcorper",
+            "title": "The Forgotten Realm",
             "authors": [
                 "Dr. Seuss"
             ],
