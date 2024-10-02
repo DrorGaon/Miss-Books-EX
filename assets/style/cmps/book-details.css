@@ -28,3 +28,11 @@
 
     justify-self: center;
 }
+
+.prev-next-btns{
+    text-align: center;
+}
+
+.prev-next-btns button{
+    width: 100px;
+}

@@ -7,18 +7,18 @@ const {useState, useEffect} = React
 export function BookDetails(){
 
     const [book, setBook] = useState(null)
-    const { bookId} = useParams()
+    const params = useParams()
 
     useEffect(() => {
         loadBook()
-    }, [])
+    }, [params.bookId])
 
     function loadBook(){
-        bookservice.get(bookId)
+        bookservice.get(params.bookId)
             .then(setBook)
             .catch(err => {
                 console.log(err)
-                showErrorMsg(`Problem loading book ${bookId}`)
+                showErrorMsg(`Problem loading book ${params.bookId}`)
             })
     }
 
@@ -31,17 +31,23 @@ export function BookDetails(){
     const priceClass = (listPrice.price > 150) ? 'expensive' : (listPrice.price < 20) ? 'cheap' : ''
 
     return (
-        <section className="book-details">
-            <section>
-                <h2>Title: {title}</h2>
-                <h2>Price: <span className={priceClass}>{listPrice.price}{listPrice.symbol}</span></h2>
-                <h2>Length: {pageCount} pages {`(${pageCountTxt})`}</h2>
-                <h2>Book summary:</h2>
-                <LongText txt={desc}/>
-                <h2>Pusblished on {`${publishedDate} ${publishedDateTxt}`}</h2>
+        <React.Fragment>
+            <section className="book-details">
+                <section>
+                    <h2>Title: {title}</h2>
+                    <h2>Price: <span className={priceClass}>{listPrice.price}{listPrice.symbol}</span></h2>
+                    <h2>Length: {pageCount} pages {`(${pageCountTxt})`}</h2>
+                    <h2>Book summary:</h2>
+                    <LongText txt={desc}/>
+                    <h2>Pusblished on {`${publishedDate} ${publishedDateTxt}`}</h2>
+                </section>
+                <img src={cover} alt="book-cover" />
+                <Link to="/books"> <button>Back</button> </Link>
             </section>
-            <img src={cover} alt="book-cover" />
-            <Link to="/books"> <button>Back</button> </Link>
-        </section>
+            <section className="prev-next-btns">
+                <Link to={`/books/${book.prevBookId}`}> <button>Previous</button> </Link>
+                <Link to={`/books/${book.nextBookId}`}> <button>Next</button> </Link>
+            </section>
+        </React.Fragment>
     )
 }
