@@ -7,14 +7,14 @@ const {useState, useEffect} = React
 export function BookDetails(){
 
     const [book, setBook] = useState(null)
-    const params = useParams()
+    const { bookId} = useParams()
 
     useEffect(() => {
         loadBook()
     }, [])
 
     function loadBook(){
-        bookservice.get(params.bookId)
+        bookservice.get(bookId)
             .then(setBook)
             .catch(err => console.log(err))
     }

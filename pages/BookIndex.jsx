@@ -3,7 +3,6 @@ const {useState, useEffect} = React
 import { BookFilter } from "../cmps/BookFilter.jsx"
 import { BookList } from "../cmps/BookList.jsx"
 import { bookservice } from "../services/book.service.js"
-import { BookDetails } from "./BookDetails.jsx"
 
 export function BookIndex(){
     

@@ -42,8 +42,13 @@
 }
 
 .book-edit button{
-    justify-self: center;
+    justify-self: end;
 
-    grid-column: 1 / span 2 ;
+    width: 100px ;
+}
+
+.book-edit a{
+    justify-self: start;
+
     width: 100px ;
 }

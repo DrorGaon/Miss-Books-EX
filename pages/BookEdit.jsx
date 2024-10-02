@@ -1,10 +1,23 @@
 import { bookservice } from "../services/book.service.js"
 
-const { useState } = React
+const { useState, useEffect } = React
+const { useParams, useNavigate, Link } = ReactRouterDOM
 
-export function BookEdit(bookId){
+export function BookEdit(){
 
     const [book, setBook] = useState(bookservice.getEmptybook())
+    const { bookId } = useParams()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if(bookId) loadBook()
+    }, [])
+
+    function loadBook(){
+        bookservice.get(bookId)
+            .then(setBook)
+            .catch(err => console.log(err))
+    }
 
     function handleChange({target}){
         const field = target.name
@@ -55,15 +68,16 @@ export function BookEdit(bookId){
         ev.preventDefault()
         bookservice.save(book)
         bookservice.query()
-            .then(books => console.log(books[-1]))
+            .then(navigate('/books'))
     }
 
     const {title, listPrice, genres, author, pageCount, publishedDate} = book
     const {price, symbol, isOnSale} = listPrice
+    const msg = bookId ? 'Edit book' : 'Add book'
     
     return (
         <section className="book-edit">
-            <h1>Add car</h1>
+            <h1>{msg}</h1>
             <form onSubmit={onSave} autoComplete="off">
                 <label htmlFor="title">Title:</label>
                 <input value={title} onChange={handleChange} type="text" name="title" id="title" />                    
@@ -80,12 +94,13 @@ export function BookEdit(bookId){
                 <label htmlFor="author">Author:</label>
                 <input value={author || ''} onChange={handleChange} type="text" name="author" id="author" />
                 <label htmlFor="genre">Genre:</label>
-                <input value={genres || ''} onChange={handleChange} type="text" name="genre" id="genre" placeholder="comma seperated for multiple" />
+                <input value={genres.join(', ') || ''} onChange={handleChange} type="text" name="genre" id="genre" placeholder="comma seperated for multiple" />
                 <label htmlFor="pageCount">Book length:</label>
                 <input value={pageCount || ''} onChange={handleChange} type="number" name="pageCount" id="pageCount" />
                 <label htmlFor="publishedDate">Publication date::</label>
                 <input value={publishedDate || ''} onChange={handleChange} type="number" name="publishedDate" id="publishedDate" />
                 <button>Save</button>
+                <Link to="/books"> <button type="button">Cancel</button></Link>            
             </form>
         </section>
     )
