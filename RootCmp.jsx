@@ -2,6 +2,7 @@ const Router = ReactRouterDOM.HashRouter
 const { Routes, Route, Navigate } = ReactRouterDOM
 
 import { AppHeader } from './cmps/AppHeader.jsx'
+import { NotFound } from './cmps/NotFound.jsx'
 import { UserMsg } from './cmps/UserMsg.jsx'
 import { About } from './pages/About.jsx'
 import { BookDetails } from './pages/BookDetails.jsx'
@@ -24,6 +25,7 @@ export function App() {
                         <Route path="/books/:bookId" element={<BookDetails />} />
                         <Route path="/books/edit" element={<BookEdit />} />
                         <Route path="/books/edit/:bookId" element={<BookEdit />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </main>
                 <UserMsg />
