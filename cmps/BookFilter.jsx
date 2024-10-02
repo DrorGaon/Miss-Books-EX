@@ -1,10 +1,6 @@
-import { bookservice } from "../services/book.service.js"
-
 const {useState, useEffect} = React
 
 export function BookFilter({filterBy, onSetFilterBy}){
-    //wanna change to filter by max price,
-    //need to implement debounce for that
 
     const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy })
 

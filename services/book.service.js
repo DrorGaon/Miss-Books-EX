@@ -28,7 +28,7 @@ function query(filterBy = {}) {
             }
             if (filterBy.author) {
                 const regex = new RegExp(filterBy.author, 'i')
-                books = books.filter(book => regex.test(book.authors))
+                books = books.filter(book => regex.test(book.author))
             }
             if (filterBy.genre) {
                 const regex = new RegExp(filterBy.genre, 'i')
