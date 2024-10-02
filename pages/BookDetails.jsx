@@ -16,7 +16,10 @@ export function BookDetails(){
     function loadBook(){
         bookservice.get(bookId)
             .then(setBook)
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err)
+                showErrorMsg(`Problem loading book ${bookId}`)
+            })
     }
 
     if (!book) return <h1>Loading...</h1>
