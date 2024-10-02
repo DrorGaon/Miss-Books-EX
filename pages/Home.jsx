@@ -1,7 +1,6 @@
-import { About } from "./About.jsx";
-import { BookIndex } from "./BookIndex.jsx";
+const { Link } = ReactRouterDOM
 
-export function Home({onSetPage}) {
+export function Home() {
 
     return (
         <section>
@@ -9,7 +8,7 @@ export function Home({onSetPage}) {
             <p>Your go to place for anything books!</p>
             <p>New - now also on the samsung smart fridge, <br />
             samsung smart toaster and more!</p>
-            <button onClick={() => onSetPage('books')}>Our catalog</button>
+            <Link to="/books"> <button>Our catalog</button></Link>
         </section>
     )
 }

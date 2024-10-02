@@ -1,20 +1,22 @@
 import { LongText } from "../cmps/LongText.jsx"
 import { bookservice } from "../services/book.service.js"
+const { useParams, Link } = ReactRouterDOM
 
 const {useState, useEffect} = React
 
-export function BookDetails({bookId, onBack}){
+export function BookDetails(){
 
     const [book, setBook] = useState(null)
+    const params = useParams()
 
     useEffect(() => {
         loadBook()
     }, [])
 
     function loadBook(){
-        bookservice.get(bookId)
-        .then(setBook)
-        .catch(err => console.log(err))
+        bookservice.get(params.bookId)
+            .then(setBook)
+            .catch(err => console.log(err))
     }
 
     if (!book) return <h1>Loading...</h1>
@@ -36,7 +38,7 @@ export function BookDetails({bookId, onBack}){
                 <h2>Pusblished on {`${publishedDate} ${publishedDateTxt}`}</h2>
             </section>
             <img src={cover} alt="book-cover" />
-            <button onClick={onBack}>Back</button>
+            <Link to="/books"> <button>Back</button> </Link>
         </section>
     )
 }

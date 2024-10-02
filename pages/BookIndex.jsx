@@ -8,16 +8,11 @@ import { BookDetails } from "./BookDetails.jsx"
 export function BookIndex(){
     
     const [books, setBooks] = useState(null)
-    const [selectedBookId, setSelectedBookId] = useState(null)
     const [filterBy, setFilterBy] = useState(bookservice.getFilterBy)
 
     useEffect(() => {
         loadBooks()
     }, [filterBy])
-
-    function setBookToDisplay(bookId){
-        setSelectedBookId(bookId)
-    }
 
     function loadBooks(){
         bookservice.query(filterBy)
@@ -29,9 +24,6 @@ export function BookIndex(){
         setFilterBy(filterBy)
     }
 
-    function onBack(){
-        setSelectedBookId(null)
-    }
 
     function onRemoveBook(bookId){
         bookservice.remove(bookId)
@@ -44,17 +36,13 @@ export function BookIndex(){
     if (!books) return <h1>Loading</h1>
     return (
         <section className="book-index">
-            {selectedBookId
-                ? <BookDetails bookId={selectedBookId} onBack={onBack}/>
-                : <React.Fragment >
+                 <React.Fragment >
                     <BookFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy}/>
                     <BookList 
                     books={books} 
-                    setBookToDisplay={setBookToDisplay}
                     onRemoveBook={onRemoveBook}
                     />
                 </React.Fragment>
-            }
         </section>
     )
 }
