@@ -1,6 +1,8 @@
 import { AddReview } from "../cmps/AddReview.jsx"
 import { LongText } from "../cmps/LongText.jsx"
+import { ReviewList } from "../cmps/ReviewList.jsx"
 import { bookservice } from "../services/book.service.js"
+
 const { useParams, Link } = ReactRouterDOM
 
 const {useState, useEffect} = React
@@ -45,6 +47,7 @@ export function BookDetails(){
                 <img src={cover} alt="book-cover" />
                 <Link to="/books"> <button>Back</button> </Link>
             </section>
+            <ReviewList reviews={book.reviews} />
             <AddReview />
             <section className="prev-next-btns">
                 <Link to={`/books/${book.prevBookId}`}> <button>Previous</button> </Link>
