@@ -13,7 +13,8 @@ export const bookservice = {
     getEmptybook,
     getNextbookId,
     getFilterBy,
-    setFilterBy
+    setFilterBy,
+    addReview,
 }
 
 function query(filterBy = {}) {
@@ -40,7 +41,7 @@ function query(filterBy = {}) {
 
 function get(bookId) {
     return storageService.get(BOOK_KEY, bookId)
-    .then(book => _setNextPrevBookId(book))
+        .then(book => _setNextPrevBookId(book))
 }
 
 function remove(bookId) {
@@ -110,4 +111,13 @@ function _setNextPrevBookId(book) {
         book.prevBookId = prevBook.id
         return book
     })
+}
+
+function addReview(bookId, review){
+    return get(bookId)
+        .then(book => {
+            if(!book.reviews) book.reviews = [review]
+            else book.reviews.push(review)
+            save(book)
+        })
 }
