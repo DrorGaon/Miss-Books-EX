@@ -6,7 +6,8 @@ export const utilService = {
     saveToStorage,
     padNum,
     getDayName,
-    getMonthName
+    getMonthName,
+    getTruthyValues,
 }
 
 function makeId(length = 6) {
@@ -61,4 +62,15 @@ function getMonthName(date) {
         'July', 'August', 'September', 'October', 'November', 'December'
     ]
     return monthNames[date.getMonth()]
+}
+
+function getTruthyValues(obj) {
+    const newObj = {}
+    for (const key in obj) {
+        const value = obj[key]
+        if (value || value === 0) {
+            newObj[key] = value
+        }
+    }
+    return newObj
 }

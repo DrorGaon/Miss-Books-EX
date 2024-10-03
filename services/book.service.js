@@ -15,6 +15,7 @@ export const bookservice = {
     getFilterBy,
     setFilterBy,
     addReview,
+    getFilterFromSearchParams,
 }
 
 function query(filterBy = {}) {
@@ -120,4 +121,17 @@ function addReview(bookId, review){
             else book.reviews.push(review)
             save(book)
         })
+}
+
+function getFilterFromSearchParams(searchParams) {
+    const title = searchParams.get('title') || ''
+    const minPrice = searchParams.get('minPrice') || ''
+    const author = searchParams.get('author') || ''
+    const genre = searchParams.get('genre') || ''
+    return {
+        title,
+        minPrice,
+        author,
+        genre,
+    }
 }
